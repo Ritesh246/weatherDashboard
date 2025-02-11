@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="Webpage.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+    <style>
+      .typingeff {
+        background: linear-gradient(
+          45deg,
+          rgb(39, 1, 65),
+          rgb(138, 112, 255),
+          rgb(171, 153, 252),
+          rgb(206, 195, 255),
+          rgb(230, 224, 255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: sans-serif;
+      }
+
+      .typingeff span {
+        color: rgb(186, 102, 255);
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grapTheContent">
+      <div class="searchTheWeather">
+        <div class="input_search_sect">
+          <input type="text" placeholder="Search Weather Info " />
+        </div>
+        <div class="submitSearch-btn">
+          <button>
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="6.5"
+                cy="6.5"
+                r="3.70"
+                stroke="black"
+                stroke-width="1.2"
+              />
+              <line
+                x1="8.0607"
+                y1="8"
+                x2="12.5"
+                y2="11.9393"
+                stroke="rgb(136, 104, 248)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <header>
+        <div class="upside"></div>
+        <nav>
+          <div class="webname">
+            <li>
+              <img width="30px" src="list.png" alt="" />
+            </li>
+            <div class="heads">
+              <li class="thunder">THUNDER</li>
+              <li class="pulse">PULSE</li>
+            </div>
+            <li></li>
+          </div>
+          <div class="topics">
+            <div class="top">
+              <li class="home-btn">HOME</li>
+              <li class="abt-us-btn">ABOUT US</li>
+              <li class="agro">AGRO HELP</li>
+              <li class="news">NEWSLETTERS</li>
+              <li>CONTACT US</li>
+              <li class="mails">MAIL</li>
+            </div>
+            <div class="bottom">
+              <li class="home-btn">HOME</li>
+              <li id="search">
+                SEARCH&nbsp;
+                <div><img src="www.png" width="30px" alt="search" /></div>
+              </li>
+              <li class="theme AI">🤖 AI WEMAN</li>
+              <li class="theme">
+                <div class="changetheme">🌗</div>
+                <div class="thema">
+                  <span class="theme_span">THEME</span>
+                  <div class="opt">
+                    <div>
+                      <a href="#" id="LIGHT">Light🔦</a>
+                      <a href="#" id="dark">Dark 🌙</a>
+                      <a href="#" id="def">Default</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="set-the-things">⚙️SETTING</li>
+              <div id="sign_log">
+                <li id="signUP_button">&nbsp;SIGN UP</li>
+                <li id="logIN_button">&nbsp;SIGN IN</li>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="dropside">
+        <div class="webname">
+          <div><img id="rev_drop" width="30px" src="list.png" alt="" /></div>
+          <div class="heads">
+            <li class="thunder">THUNDER</li>
+            <li class="pulse">PULSE</li>
+          </div>
+          <li></li>
+        </div>
+        <div class="dropmenu">
+          <div class="oneByone dhome-btn">🏠Home</div>
+          <div class="oneByone dabt-us-btn">ℹ️About Us</div>
+          <div class="oneByone dagro">🍓Agro Help</div>
+          <div class="oneByone dnews">📜Newsletter</div>
+          <div class="oneByone dAI">🤖AI WEMAN</div>
+          <div class="oneByone dsearch">🔍Search</div>
+          <div class="oneByone">☎️Contact Us</div>
+          <div class="oneByone dmails_part">📬Mail</div>
+          <div class="oneByone">🌗Theme</div>
+          <div class="oneByone dset-the-things">⚙️Setting</div>
+          <div class="oneByone">👨🏻‍💻Sign In</div>
+          <div class="oneByone">🗝️Log in/Log out</div>
+        </div>
+      </div>
+
+      <div class="Box-section2">
+        <div class="other-infowd">
+          <div class="containThis">
+            <h3>Want this? Then click...</h3>
+            <br />
+            <ul>
+              <li>Weekly Analytics</li>
+              <li>Monthly Analytics</li>
+              <li>More Weather Info</li>
+              <button class="clickme">Click me</button>
+              <hr />
+              <li>Calamities</li>
+              <li>NewsArticles</li>
+              <li>History</li>
+              <li>Be a Contributor and volunteer</li>
+              <button class="clickme">Click me</button>
+            </ul>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="home">
+            <div class="typeAnim">
+              <h1 class="typingeff">
+                Search Weather Location <span class="auto_text"></span>
+              </h1>
+              <span>
+                <div class="date_sect">
+                  <div class="date_head">Date</div>
+                  <input type="date" class="date_input"/>
+                </div>
+              </span>
+            </div>
+
+            <div class="Image_Locate">
+              <div class="glassLoc">
+                <h1>WEATHER OF MUMBAI</h1>
+              </div>
+
+              <div class="glassContents">
+                <div class="gC1">
+                  <div>
+                    <h1>&nbsp;Temperature🌡️</h1>
+                    <div class="tempunit">
+                      <span>26°C</span>
+                    </div>
+                    <h1>&nbsp;Humidity💦</h1>
+                    <div class="humidunit">
+                      <span>47%</span>
+                    </div>
+                    <h1>&nbsp;Wind Speed🍃</h1>
+                    <div class="windunit">
+                      <span>16km/hr</span>
+                    </div>
+                    <!-- <div class="cloudsun">
+                      </div> -->
+                  </div>
+                </div>
+                <div class="gC2">
+                  <div class="gC2a">
+                    <div class="howItFeels">
+                      <h2>How it Feels!!!</h2>
+                      <h3 class="feels">❄️Cool <br />Breeze</h3>
+                    </div>
+                    <div class="AQI">
+                      <h2>AQI Index of Mumbai</h2>
+                      <h1 class="white ppm">153 ppm</h1>
+                      <h2 class="white quality">"Worse Air Quality"</h2>
+                    </div>
+                  </div>
+                  <div class="gC2b">
+                    <div class="sunrise-n-set">
+                      <div class="rise">
+                        <h2>Sunrise☀️</h2>
+                        <div><h3>Sun rises at 7:12 a.m.</h3></div>
+                      </div>
+                      <div class="set">
+                        <h2>Sunset🌅</h2>
+                        <div>
+                          <h3>Sun sets at 6:32 p.m.</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="additional">
+              <h1>Additional Analytics of Weather of Mumbai</h1>
+              <div class="additional_info_box">
+                <div class="cards_add card1">
+                  <div class="cardup">
+                    <h3>This is Card 1</h3>
+                    <div class="nextCardDisplay">
+                      <button class="btnCard1">Next</button>
+                    </div>
+                  </div>
+                  <div class="cardDown"></div>
+                </div>
+                <div class="cards_add card2">
+                  <div class="cardup">
+                    <h3>This is Card 2</h3>
+                    <div class="nextCardDisplay">
+                      <button class="btnCard2">Next</button>
+                    </div>
+                  </div>
+                  <div class="cardDown"></div>
+                </div>
+                <div class="cards_add card3">
+                  <div class="cardup">
+                    <h3>This is Card 3</h3>
+                    <div class="nextCardDisplay">
+                      <button class="btnCard3">Next</button>
+                    </div>
+                  </div>
+                  <div class="cardDown"></div>
+                </div>
+                <div class="cards_add card4">
+                  <div class="cardup">
+                    <h3>This is Card 4</h3>
+                    <div class="nextCardDisplay">
+                      <button class="btnCard4">Next</button>
+                    </div>
+                  </div>
+                  <div class="cardDown"></div>
+                </div>
+              </div>
+            </div>
+
+            <span>
+              <div class="largeInfo">
+                <div class="moonIMG">
+                  <img
+                    src="0fcc50b8809d461995dc53922fff6c19-removebg-preview.png"
+                    alt=""
+                  />
+                </div>
+                <div class="sunIMG">
+                  <img
+                    src="bright-sun-emoji-illustration-download-in-svg-png-gif-file-formats--suns-with-faces-pack-nature-illustrations-9764739.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="weekly">
+                  <div>
+                    <h1>Get Weekly Analysis Report</h1>
+                    <button>Click Me</button>
+                  </div>
+                  <div class="weekDesc">
+                    <p>
+                      Explore the week's weather trends and patterns with our
+                      detailed weekly analysis. Our dashboard provides
+                      comprehensive insights into daily temperature
+                      fluctuations, precipitation levels, wind speeds, and
+                      humidity rates. Whether you're planning your activities or
+                      monitoring weather impacts, our weekly analysis offers a
+                      clear and concise overview to help you stay informed and
+                      prepared.
+                    </p>
+                  </div>
+                </div>
+                <div class="monthly">
+                  <div>
+                    <h1>Get Monthly Statistical report</h1>
+                    <button>Click Me</button>
+                  </div>
+                  <div class="monthDesc">
+                    <p>
+                      Discover the broader weather patterns with our monthly
+                      weather analysis. This feature provides an in-depth
+                      examination of temperature averages, rainfall totals, and
+                      extreme weather events over the past month. Our dashboard
+                      allows you to track changes in climate conditions, compare
+                      data with historical records, and identify trends that
+                      could affect your long-term planning and decision-making.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+
+          <div class="About_us">
+            <div class="abtus-ins">
+              <div><h1>About Us</h1></div>
+              <div class="glass">
+                <p>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We a Group of 4
+                  Students of Department Computer Engineering have made this
+                  Website of Weather Dashboard named as Thunder Pulse.The
+                  students who made this project are Suraj Kumar, Om Shingne,
+                  Adarsh Singh and Ritesh Sonawane. This project was only being
+                  possible to be sucessful with continues guidence of our
+                  Project Head that is Dr. Amol .P. Pande Sir. It was very
+                  difficult for some students with no prior knowledge gains
+                  knowledge about various technologies and frameworks used for
+                  Programming or designing Full Stack Website with due course of
+                  time.This project represents our journey from beginners to
+                  competent web developers, demonstrating our growth in both
+                  technical skills and collaborative development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="Agro_help">
+            <div class="agriculture">
+              <h1>Agro Help</h1>
+              <p>Under maintenance🚧</p>
+            </div>
+          </div>
+          <div class="NewsLetter">
+            <div class="newsHead"><h1>News Letter</h1></div>
+            <div class="newsContent"></div>
+            <br />
+            <div class="nC2"></div>
+            <br />
+            <div class="nC3"></div>
+            <br />
+            <div class="nC4"></div>
+          </div>
+          <div class="AI-WEMAN">
+            <div class="AI_assist">
+              <h1>Ai Assistant</h1>
+              <div class="AI_Content"></div>
+            </div>
+          </div>
+
+          <div class="Setting">
+            <div class="set-left">
+              <h1>Setting</h1>
+              <div class="set">
+                <div class="element_set">
+                  <div>Language</div>
+                  <div>>></div>
+                </div>
+                <div class="element_set slight_right">
+                  <div>Notifications</div>
+                  <div>>></div>
+                </div>
+                <div class="element_set">
+                  <div>Theme</div>
+                  <div>>></div>
+                </div>
+                <div class="element_set slight_right">
+                  <div>Sign UP</div>
+                  <div>>></div>
+                </div>
+                <div class="element_set">
+                  <div>Sign IN</div>
+                  <div>>></div>
+                </div>
+                <div class="element_set slight_right">
+                  <div>Advance Settings</div>
+                  <div>>></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mails_part">
+            <h1>Mails</h1>
+            <form action="">
+              <label for="emails"
+                >Enter and select your email reports of Weather:-</label
+              >
+              <input type="email" class="emails" placeholder="Enter email" />
+              <button class="mailbtn">📭</button>
+            </form>
+            <br />
+            <h3>List of mails sent to the selected gmail account</h3>
+            <div class="emaillogs"></div>
+          </div>
+          <footer></footer>
+        </div>
+        <div class="more-infowd"></div>
+        <div class="scroll_downmenu"></div>
+      </div>
+    </div>
+
+    <script>
+      var typed = new Typed(".auto_text", {
+        strings: [
+          " of a particular City",
+          " of any State",
+          " of your desired Country",
+        ],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+    </script>
+    <script src="Webpage.js"></script>
+  </body>
+</html>
